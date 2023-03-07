@@ -152,7 +152,7 @@
       - The current template is not the activate account page
       - The current template is not the login page, unless multipass login is enabled
     {% endcomment %}
-    {%- assign should_redirect = template != blank and template.name != 'customers/activate_account' and template.name != 'login' or settings.multipass_login -%}
+    {%- assign should_redirect = template != blank and request.page_type != 'customers/activate_account' and template.name != 'login' or settings.multipass_login -%}
 
     {%- if settings.storefront_hostname != blank and should_redirect -%}
     <script>
