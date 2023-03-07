@@ -166,7 +166,7 @@
           var customRedirectsStr = "{{ settings.custom_redirects | newline_to_br | strip_newlines | replace: ' ', '' }}";
           if (customRedirectsStr) {
             var customRedirects = customRedirectsStr.split('<br/>');
-  
+ 
             for (var cri = 0; cri < customRedirects.length; cri += 1) {
               var redirect = customRedirects[cri].split('>');
               var fromPath = redirect[0];
@@ -192,6 +192,8 @@
     {%- if should_redirect -%}
       <div class="redirect">
         {%- if settings.storefront_hostname != blank -%}
+        <pre style="display:none">{{ request.page_type }}</pre>
+        <pre style="display:none">{{ template.name }}</pre>
         <h1>Redirecting...</h1>
         <p>
           <a id="redirect-link" href="https://{{ settings.storefront_hostname }}/">Click here</a>
