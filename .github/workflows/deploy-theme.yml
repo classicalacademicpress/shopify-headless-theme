@@ -9,7 +9,7 @@ on:
     inputs:
       debug_enabled:
         type: boolean
-        description: 'Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)'
+        description: 'Run the build with tmate debugging enabled'
         required: false
         default: false
 
@@ -23,7 +23,7 @@ env:
   # Store URL, like your-store.myshopify.com
   SHOPIFY_FLAG_STORE: '${{ secrets.SHOPIFY_STORE }}'
   # Turn off interactive prompts
-  SHOPIFY_CLI_TTY: 1
+  SHOPIFY_CLI_TTY: 0
 
 jobs:
   deploy:
