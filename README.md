@@ -55,3 +55,19 @@ Enable the `multipass_login` option in **Theme settings > Storefront** if you im
 ## Gift cards
 
 Since the Shopify Storefront API unfortunately does not support fetching gift cards yet, a customizable `gift_card.liquid` template has been added.
+
+## Development
+
+1. Install [Shopify CLI for themes](https://shopify.dev/docs/themes/tools/cli)
+2. Clone the repo and pull the latest
+```bash
+git clone git@github.com:classicalacademicpress/shopify-headless-theme.git
+cd shopify-headless-theme
+shopify logout
+shopify theme pull -path theme
+```
+3. Commit & push changes (changes are pushed to live via the [Theme deploy](https://github.com/classicalacademicpress/shopify-headless-theme/actions/workflows/deploy-theme.yml) workflow)
+
+### Manually pushing changes
+
+`shopify theme push --allow-live --path theme --theme Headless-theme`
