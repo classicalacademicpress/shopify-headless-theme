@@ -205,6 +205,10 @@
           <pre style="display:none">not login</pre>
         {%- endif -%}
 
+        {%- if template.name != 'activate_account' and template.name != 'login' or settings.multipass_login -%}
+        <pre style="display:none">not customer</pre>
+        {%- endif -%}
+
         <h1>Redirecting...</h1>
         <p>
           <a id="redirect-link" href="https://{{ settings.storefront_hostname }}/">Click here</a>
