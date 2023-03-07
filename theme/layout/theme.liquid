@@ -206,7 +206,11 @@
         {%- endif -%}
 
         {%- if template.name != 'activate_account' and template.name != 'login' or settings.multipass_login -%}
-        <pre style="display:none">not customer</pre>
+          <pre style="display:none">not customer</pre>
+        {%- endif -%}
+
+        {%- if template != blank and template.name != 'activate_account' and template.name != 'login' or settings.multipass_login -%}
+          <pre style="display:none">should redirect</pre>
         {%- endif -%}
 
         <h1>Redirecting...</h1>
