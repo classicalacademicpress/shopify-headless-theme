@@ -2,6 +2,22 @@
   "current": {
     "storefront_hostname": "scholeacademy.com",
     "custom_redirects": "",
-    "multipass_login": false
+    "multipass_login": false,
+    "colors_accent_1": "{{ shop.brand.colors.primary[0].background }}",
+    "colors_accent_2": "{{ shop.brand.colors.primary[0].foreground }}",
+    "colors_text": "{{ shop.brand.colors.secondary[0].foreground }}",
+    "colors_outline_button_labels": "{{ shop.brand.colors.primary[0].background }}",
+    "type_header_font": "open_sans_n4",
+    "type_body_font": "open_sans_n4",
+    "favicon": "shopify:\/\/shop_images\/Schole_Academy_logo1.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "large",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_color": "#F3F3F3",
+    "checkout_accent_color": "#6b1328",
+    "checkout_button_color": "#6b1328",
+    "content_for_index": [
+
+    ]
   }
 }
