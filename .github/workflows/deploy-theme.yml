@@ -27,5 +27,5 @@ jobs:
           SHOPIFY_FLAG_STORE: '${{ secrets.SHOPIFY_STORE }}'
           # Password generated from Theme Access app
           SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
-          SHOPIFY_CLI_TTY: 0
+          SHOPIFY_CLI_NO_ANALYTICS: 1
         run: shopify theme push --path theme --theme Headless-theme
