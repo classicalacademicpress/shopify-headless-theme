@@ -180,7 +180,7 @@
           }
 
           window.storefrontRedirectUrl = redirectUrl;
-          window.location.replace(redirectUrl);
+          //window.location.replace(redirectUrl);
         }
       }
     </script>
@@ -200,7 +200,7 @@
         <script>
           if (!window.Shopify.designMode) {
             var redirectLink = document.getElementById("redirect-link");
-            redirectLink.href = window.storefrontRedirectUrl;
+            //redirectLink.href = window.storefrontRedirectUrl;
           }
         </script>
         {%- else -%}
